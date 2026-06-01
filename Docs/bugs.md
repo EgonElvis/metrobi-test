@@ -122,9 +122,9 @@ The application does not handle the expired credential state gracefully and expo
 
 The only identified workaround is using the "Forgot Password" flow
 
-**Evidence:**  
-[[Click the image to see the video]<img width="1834" height="936" alt="image" src="https://github.com/user-attachments/assets/0def7365-b95a-4b79-bfba-7f735b084600" />](https://github.com/user-attachments/assets/bafbac25-c348-4130-93cc-1f588cc57d67)
+**Evidence:** 
 
+[<img width="1000" alt="Watch Video" src="https://github.com/user-attachments/assets/THUMBNAIL-ID" />](https://github.com/user-attachments/assets/bafbac25-c348-4130-93cc-1f588cc57d67)
 
 ---
 
@@ -132,7 +132,7 @@ The only identified workaround is using the "Forgot Password" flow
 
 **Severity:** Medium
 
-**Priority:** Medium
+**Priority:** Low
 
 **Description:**
 
@@ -176,33 +176,63 @@ The application may not be clearing the previous error message before rendering 
 
 ---
 
-## ⚠️ BUG005 - Asd
+## 🟠 BUG005 - Invalid and Duplicate Email Can Be Added as a New User
 
-**Severity:**  Low   
-**Priority:**  Low 
+**Severity:** Medium
 
-**Description:**   
-asd
+**Priority:** Medium
+
+**Description:**
+
+When adding a new user under General Settings > Users, the system allows an invalid email address to be added as a user.
+
+Additionally, the same invalid email address can be added to different accounts/companies. In one scenario, the system displayed a message indicating that the email already existed, but still allowed the user to be created.
+
+This creates inconsistent validation behavior and allows users to invite or register random invalid email addresses without proper blocking.
 
 **Steps to Reproduce:**
-1. asd  
-2. asd
-3. asd
-4. asd
 
-**Expected Result:**   
-- asd
-- asd
+1. Go to Settings
+2. Open General Settings
+3. Select the Users tab
+4. Click "Add new user"
+5. Fill in the required fields
+6. Enter an invalid email address, such as `a@a.com`
+7. Select a role
+8. Click "Add"
+9. Observe that the user is created
+10. Repeat the same process using another account/company with the same email address
+11. Observe that the system may warn that the email already exists but still allows the user to be created
 
-**Actual Result:**   
-- asd
-- asd
+**Expected Result:**
 
-**Technical Observation:**   
-asd
+- Invalid email formats should be blocked before user creation
+- Duplicate emails should not be allowed if the system identifies the email already exists
+- The form should prevent submission when validation errors are present
+- A clear validation message should be displayed to the user
 
-**Evidence:**  
-image
+**Actual Result:**
+
+- Invalid email can be added as a new user
+- Duplicate email can be added across different accounts/companies
+- The system may display an existing email warning but still allows the user creation
+- Validation does not consistently prevent invalid data from being saved
+
+**Technical Observation:**
+
+The user creation flow appears to lack consistent validation before persisting user data.
+
+The application may be displaying validation feedback without blocking the submit action, allowing invalid or duplicate emails to be saved.
+
+This may also indicate that frontend validation and backend validation are not aligned.
+
+**Evidence:**
+
+[[Click the image to see the video]<img width="1095" height="936" alt="image" src="https://github.com/user-attachments/assets/6ae9aadd-eacd-4d38-9ca1-88302d60ccf2" />
+](https://github.com/user-attachments/assets/951928e9-5442-4a4d-9f4a-fb7fc4b62f4c)
+
+
+
 
 ---
 
@@ -236,5 +266,11 @@ image
 
 
 **Evidence:**  
-image
+
+[<img width="1000" alt="Watch Video" src="https://github.com/user-attachments/assets/THUMBNAIL-ID" />](https://github.com/user-attachments/assets/bafbac25-c348-4130-93cc-1f588cc57d67)
+
+
+
+
+
 
