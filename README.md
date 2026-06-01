@@ -84,3 +84,9 @@ This was recorded as an observation rather than a defect because the expected be
 Detailed bug reports and supporting evidence can be found in:
 
 * `Docs/bugs.md`
+
+## Author
+
+**Egon Elvis Jorge**
+
+QA Engineer | Software Tester
