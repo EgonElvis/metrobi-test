@@ -18,7 +18,7 @@ The application was tested using exploratory testing techniques focused on:
 
 ## Environment
 
-- Browser: Microsoft Edge
+- Browser: Microsoft Edge, Google Chrome
 - OS: Windows 11
 
 ## Results
