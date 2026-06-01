@@ -2,7 +2,7 @@
 
 ---
 
-## ⚠️ BUG001 - Email Verification Template Breaks Layout With Long Verification URL
+## 🟠 BUG001 - Email Verification Template Breaks Layout With Long Verification URL
 
 **Severity:**  Medium     
 **Priority:**  Medium 
@@ -30,11 +30,13 @@ After creating a new account, the email verification template does not properly 
 The email template appears not to handle large URL strings correctly. Missing word-wrap or overflow handling may be causing the layout to break in some email clients.
 
 **Evidence:**  
-image
+
+<img width="1874" height="956" alt="msedge_2026-06-01_00-28-08" src="https://github.com/user-attachments/assets/6b1a4632-f974-45a0-89cd-00ac220b5395" />
+
 
 ---
 
-## ⚠️ BUG002 - Chat Widget Overlaps reCAPTCHA Security Information
+## 🟡 BUG002 - Chat Widget Overlaps reCAPTCHA Security Information
 
 **Severity:**  Low   
 **Priority:**  Low 
@@ -60,37 +62,69 @@ On the account creation confirmation page, the chatbot widget overlaps the reCAP
 The widget appears to use a fixed position without considering the reserved space required by Google's reCAPTCHA disclosure.
 
 **Evidence:**  
-image
+<img width="1564" height="956" alt="msedge_2026-05-31_02-27-13" src="https://github.com/user-attachments/assets/8d90f893-b779-4ba3-be36-4fe5f119ac7f" />
+<img width="1564" height="956" alt="msedge_2026-05-31_02-27-50" src="https://github.com/user-attachments/assets/8f8f22ec-614d-40e6-be2f-ad18da03e873" />
+
+
 
 ---
 
-## ⚠️ BUG003 - Asd
+##  🟠 BUG003 - Password Setup Flow Fails After User Remains Idle
 
-**Severity:**  Low   
-**Priority:**  Low 
+**Severity:** Medium
 
-**Description:**   
-asd
+**Priority:** High
+
+**Description:**
+
+When a newly created user remains idle on the password setup screen for approximately 30 minutes to 1 hour, the password creation flow fails and the user cannot complete the onboarding process.
+
+Although this scenario may not happen frequently, it can occur if a user starts creating the account and gets interrupted before setting the password.
 
 **Steps to Reproduce:**
-1. asd  
-2. asd
-3. asd
-4. asd
 
-**Expected Result:**   
-- asd
-- asd
+1. Create a new Metrobi account
+2. Access the password setup screen
+3. Remain idle on the page for approximately 30 minutes to 1 hour
+4. Try to create the password
+5. Submit the form
 
-**Actual Result:**   
-- asd
-- asd
+**Expected Result:**
+
+- User should be able to complete the password creation successfully
+- If the session expires, the system should display a clear and user-friendly message
+- User should be redirected to reauthenticate or request a new valid password setup link
+
+**Actual Result:**
+
+- Password creation fails
+- User cannot proceed with the onboarding flow
+- System returns the following error:
+
+{
+  "error": {
+    "code": 400,
+    "message": "CREDENTIAL_TOO_OLD_LOGIN_AGAIN",
+    "errors": [
+      {
+        "message": "CREDENTIAL_TOO_OLD_LOGIN_AGAIN",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}
 
 **Technical Observation:**   
-asd
+The authentication credential used during password setup appears to expire after a period of inactivity.
+
+The application does not handle the expired credential state gracefully and exposes a raw authentication error instead of guiding the user to recover the flow.
+
+The only identified workaround is using the "Forgot Password" flow
 
 **Evidence:**  
-image
+[[Click the image to see the video]<img width="1834" height="936" alt="image" src="https://github.com/user-attachments/assets/0def7365-b95a-4b79-bfba-7f735b084600" />](https://github.com/user-attachments/assets/bafbac25-c348-4130-93cc-1f588cc57d67)
+
 
 ---
 
