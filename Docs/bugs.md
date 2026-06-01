@@ -27,7 +27,8 @@ After creating a new account, the email verification template does not properly 
 - Background section appears visually broken or incomplete
 
 **Technical Observation:**   
-The email template appears not to handle large URL strings correctly. Missing word-wrap or overflow handling may be causing the layout to break in some email clients.
+The email template appears not to handle large URL strings correctly.  
+Missing word-wrap or overflow handling may be causing the layout to break in some email clients.
 
 **Evidence:**  
 
@@ -64,7 +65,6 @@ The widget appears to use a fixed position without considering the reserved spac
 **Evidence:**  
 <img width="1564" height="956" alt="msedge_2026-05-31_02-27-13" src="https://github.com/user-attachments/assets/8d90f893-b779-4ba3-be36-4fe5f119ac7f" />
 <img width="1564" height="956" alt="msedge_2026-05-31_02-27-50" src="https://github.com/user-attachments/assets/8f8f22ec-614d-40e6-be2f-ad18da03e873" />
-
 
 
 ---
@@ -116,15 +116,14 @@ Although this scenario may not happen frequently, it can occur if a user starts 
 }
 
 **Technical Observation:**   
-The authentication credential used during password setup appears to expire after a period of inactivity.
-
-The application does not handle the expired credential state gracefully and exposes a raw authentication error instead of guiding the user to recover the flow.
-
-The only identified workaround is using the "Forgot Password" flow
+The authentication credential used during password setup appears to expire after a period of inactivity.  
+The application does not handle the expired credential state gracefully and exposes a raw authentication error instead of guiding the user to recover the flow.   
+The only identified workaround is using the "Forgot Password" flow.
 
 **Evidence:** 
 
 [<img width="1000" alt="Watch Video" src="https://github.com/user-attachments/assets/THUMBNAIL-ID" />](https://github.com/user-attachments/assets/bafbac25-c348-4130-93cc-1f588cc57d67)
+
 
 ---
 
@@ -136,8 +135,7 @@ The only identified workaround is using the "Forgot Password" flow
 
 **Description:**
 
-When creating a new account, if the user first enters an invalid email address, the system correctly displays an email validation error.
-
+When creating a new account, if the user first enters an invalid email address, the system correctly displays an email validation error.  
 However, after the user replaces the invalid email with a valid one and successfully creates the account, the previous validation error message is still displayed on the account creation confirmation page.
 
 **Steps to Reproduce:**
@@ -173,7 +171,6 @@ The application may not be clearing the previous error message before rendering 
 <img width="1874" height="995" alt="msedge_2026-05-30_15-08-05" src="https://github.com/user-attachments/assets/6f00f9d2-3437-42fa-b402-0c4d56fb3435" />
 
 
-
 ---
 
 ## 🟠 BUG005 - Invalid and Duplicate Email Can Be Added as a New User
@@ -184,10 +181,8 @@ The application may not be clearing the previous error message before rendering 
 
 **Description:**
 
-When adding a new user under General Settings > Users, the system allows an invalid email address to be added as a user.
-
-Additionally, the same invalid email address can be added to different accounts/companies. In one scenario, the system displayed a message indicating that the email already existed, but still allowed the user to be created.
-
+When adding a new user under General Settings > Users, the system allows an invalid email address to be added as a user.  
+Additionally, the same invalid email address can be added to different accounts/companies. In one scenario, the system displayed a message indicating that the email already existed, but still allowed the user to be created.  
 This creates inconsistent validation behavior and allows users to invite or register random invalid email addresses without proper blocking.
 
 **Steps to Reproduce:**
@@ -220,10 +215,8 @@ This creates inconsistent validation behavior and allows users to invite or regi
 
 **Technical Observation:**
 
-The user creation flow appears to lack consistent validation before persisting user data.
-
-The application may be displaying validation feedback without blocking the submit action, allowing invalid or duplicate emails to be saved.
-
+The user creation flow appears to lack consistent validation before persisting user data.  
+The application may be displaying validation feedback without blocking the submit action, allowing invalid or duplicate emails to be saved.   
 This may also indicate that frontend validation and backend validation are not aligned.
 
 **Evidence:**
@@ -232,11 +225,72 @@ This may also indicate that frontend validation and backend validation are not a
 ](https://github.com/user-attachments/assets/951928e9-5442-4a4d-9f4a-fb7fc4b62f4c)
 
 
+---
+
+## 🟠 BUG006 - Asd
+
+**Severity:**  Low   
+**Priority:**  Low 
+
+**Description:**   
+asd
+
+**Steps to Reproduce:**
+1. asd  
+2. asd
+3. asd
+4. asd
+
+**Expected Result:**   
+- asd
+- asd
+
+**Actual Result:**   
+- asd
+- asd
+
+**Technical Observation:**   
+asd
+
+**Evidence:**  
+image
 
 
 ---
 
-## ⚠️ BUG006 - Asd
+## 🟠 BUG007 - Asd
+
+**Severity:**  Low   
+**Priority:**  Low 
+
+**Description:**   
+asd
+
+**Steps to Reproduce:**
+1. asd  
+2. asd
+3. asd
+4. asd
+
+**Expected Result:**   
+- asd
+- asd
+
+**Actual Result:**   
+- asd
+- asd
+
+**Technical Observation:**   
+asd
+
+**Evidence:**  
+image
+
+
+
+---
+
+## 🟠 BUG006 - Asd
 
 **Severity:**  Low   
 **Priority:**  Low 
@@ -267,10 +321,40 @@ image
 
 **Evidence:**  
 
+
+
+
+---
+
+## 🟠 BUG006 - Asd
+
+**Severity:**  Low   
+**Priority:**  Low 
+
+**Description:**   
+asd
+
+**Steps to Reproduce:**
+1. asd  
+2. asd
+3. asd
+4. asd
+
+**Expected Result:**   
+- asd
+- asd
+
+**Actual Result:**   
+- asd
+- asd
+
+**Technical Observation:**   
+asd
+
+
+**Evidence:**  
+
 [<img width="1000" alt="Watch Video" src="https://github.com/user-attachments/assets/THUMBNAIL-ID" />](https://github.com/user-attachments/assets/bafbac25-c348-4130-93cc-1f588cc57d67)
-
-
-
 
 
 
