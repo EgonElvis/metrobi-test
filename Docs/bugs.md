@@ -69,7 +69,7 @@ The widget appears to use a fixed position without considering the reserved spac
 
 ---
 
-##  🟠 BUG003 - Password Setup Flow Fails After User Remains Idle
+## 🟠 BUG003 - Password Setup Flow Fails After User Remains Idle
 
 **Severity:** Medium
 
@@ -128,33 +128,51 @@ The only identified workaround is using the "Forgot Password" flow
 
 ---
 
-## ⚠️ BUG004 - Asd
+## 🟠 BUG004 - Invalid Email Error Message Persists After Successful Account Creation
 
-**Severity:**  Low   
-**Priority:**  Low 
+**Severity:** Medium
 
-**Description:**   
-asd
+**Priority:** Medium
+
+**Description:**
+
+When creating a new account, if the user first enters an invalid email address, the system correctly displays an email validation error.
+
+However, after the user replaces the invalid email with a valid one and successfully creates the account, the previous validation error message is still displayed on the account creation confirmation page.
 
 **Steps to Reproduce:**
-1. asd  
-2. asd
-3. asd
-4. asd
 
-**Expected Result:**   
-- asd
-- asd
+1. Access the account creation page
+2. Fill in the form using an invalid email address
+3. Submit the form
+4. Observe the email validation error message
+5. Replace the invalid email with a valid email address
+6. Submit the form again
+7. Observe the account creation confirmation page
 
-**Actual Result:**   
-- asd
-- asd
+**Expected Result:**
 
-**Technical Observation:**   
-asd
+- The invalid email error message should disappear after the user corrects the email
+- The confirmation page should only display information related to the successful account creation
+- No previous validation errors should be shown after a successful submission
+
+**Actual Result:**
+
+- The account is successfully created
+- The confirmation page is displayed
+- The previous invalid email error message remains visible on the confirmation page
+
+**Technical Observation:**
+
+The validation error state appears to persist after successful form submission.  
+The application may not be clearing the previous error message before rendering the account creation confirmation state.
 
 **Evidence:**  
-image
+
+<img width="500" height="701" alt="msedge_2026-05-31_23-26-24" src="https://github.com/user-attachments/assets/cc9a208e-0a7d-428f-b368-6ec9769be082" />
+<img width="1874" height="995" alt="msedge_2026-05-30_15-08-05" src="https://github.com/user-attachments/assets/6f00f9d2-3437-42fa-b402-0c4d56fb3435" />
+
+
 
 ---
 
