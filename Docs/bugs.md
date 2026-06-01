@@ -173,9 +173,9 @@ The application may not be clearing the previous error message before rendering 
 
 ---
 
-## 🟠 BUG005 - Invalid and Duplicate Email Can Be Added as a New User
+## 🔴 BUG005 - Invalid and Duplicate Email Can Be Added as a New User
 
-**Severity:** Medium
+**Severity:** High
 
 **Priority:** Medium
 
@@ -227,134 +227,7 @@ This may also indicate that frontend validation and backend validation are not a
 
 ---
 
-## 🟠 BUG006 - Asd
 
-**Severity:**  Low   
-**Priority:**  Low 
-
-**Description:**   
-asd
-
-**Steps to Reproduce:**
-1. asd  
-2. asd
-3. asd
-4. asd
-
-**Expected Result:**   
-- asd
-- asd
-
-**Actual Result:**   
-- asd
-- asd
-
-**Technical Observation:**   
-asd
-
-**Evidence:**  
-image
-
-
----
-
-## 🟠 BUG007 - Asd
-
-**Severity:**  Low   
-**Priority:**  Low 
-
-**Description:**   
-asd
-
-**Steps to Reproduce:**
-1. asd  
-2. asd
-3. asd
-4. asd
-
-**Expected Result:**   
-- asd
-- asd
-
-**Actual Result:**   
-- asd
-- asd
-
-**Technical Observation:**   
-asd
-
-**Evidence:**  
-image
-
-
-
----
-
-## 🟠 BUG006 - Asd
-
-**Severity:**  Low   
-**Priority:**  Low 
-
-**Description:**   
-asd
-
-**Steps to Reproduce:**
-1. asd  
-2. asd
-3. asd
-4. asd
-
-**Expected Result:**   
-- asd
-- asd
-
-**Actual Result:**   
-- asd
-- asd
-
-**Technical Observation:**   
-asd
-
-**Evidence:**  
-image
-
-
-**Evidence:**  
-
-
-
-
----
-
-## 🟠 BUG006 - Asd
-
-**Severity:**  Low   
-**Priority:**  Low 
-
-**Description:**   
-asd
-
-**Steps to Reproduce:**
-1. asd  
-2. asd
-3. asd
-4. asd
-
-**Expected Result:**   
-- asd
-- asd
-
-**Actual Result:**   
-- asd
-- asd
-
-**Technical Observation:**   
-asd
-
-
-**Evidence:**  
-
-[<img width="1000" alt="Watch Video" src="https://github.com/user-attachments/assets/THUMBNAIL-ID" />](https://github.com/user-attachments/assets/bafbac25-c348-4130-93cc-1f588cc57d67)
 
 
 
