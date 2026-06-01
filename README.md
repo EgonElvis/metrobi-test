@@ -1,12 +1,30 @@
-# Metrobi QA Assessment
+# Metrobi Exploratory Testing Challenge
 
-This repository contains the findings identified during exploratory testing of the Metrobi test environment.
+## Objective
 
-The reports include:
+Perform exploratory testing on the Metrobi shipper dashboard and document findings.
 
-- Functional issues
-- UX observations
-- Validation issues
-- Supporting video evidence
+## Test Approach
 
-All findings were documented using a standard QA reporting format including reproduction steps, expected behavior, actual behavior and impact assessment.
+The application was tested using exploratory testing techniques focused on:
+
+- User onboarding
+- Account management
+- Delivery creation flow
+- Settings management
+- User administration
+- Session handling
+- Form validation
+
+## Environment
+
+- Browser: Microsoft Edge
+- OS: Windows 11
+
+## Results
+
+- Total Bugs Found: 5
+
+## Documentation
+
+- bugs.md
